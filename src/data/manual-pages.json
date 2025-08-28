@@ -1,0 +1,42 @@
+[
+  {
+    "id": "720s-general-overview",
+    "modelId": "720s",
+    "sectionId": "general",
+    "title": "Vehicle Overview",
+    "slug": "overview",
+    "content": "# McLaren 720S Overview\n\nThe McLaren 720S is a mid-engine sports car produced by McLaren Automotive. It is the second car in the McLaren Super Series, replacing the 650S beginning in 2017.\n\n## Key Specifications\n\n| Specification | Value |\n|---------------|-------|\n| Engine | 4.0L twin-turbo V8 |\n| Power | 710 hp (720 PS) |\n| Torque | 568 lb-ft |\n| 0-60 mph | 2.8 seconds |\n| Top Speed | 212 mph |\n\n## Safety Precautions\n\n> **Warning**: Always ensure the vehicle is properly secured before performing any maintenance procedures.\n\n### Before Starting Work\n\n1. Park on level ground\n2. Engage parking brake\n3. Disconnect battery (negative terminal first)\n4. Allow engine to cool completely\n\n## Engine Bay Access\n\nTo access the engine bay:\n\n```bash\n# Emergency engine bay release sequence\n1. Locate release handle in cabin\n2. Pull handle while pressing hood release\n3. Lift hood using support struts\n```\n\n![Engine Bay](https://via.placeholder.com/600x300?text=Engine+Bay+Diagram)\n*Figure 1: Engine bay layout diagram*"
+  },
+  {
+    "id": "720s-general-specifications",
+    "modelId": "720s",
+    "sectionId": "general",
+    "title": "Technical Specifications",
+    "slug": "specifications",
+    "content": "# Technical Specifications\n\n## Engine\n\nThe McLaren 720S features a 4.0-liter twin-turbocharged V8 engine.\n\n### Engine Specifications\n\n| Component | Specification |\n|-----------|---------------|\n| Displacement | 3,994 cc |\n| Configuration | V8, 90° |\n| Valvetrain | DOHC, 4 valves per cylinder |\n| Compression Ratio | 10.5:1 |\n| Fuel System | Direct injection |\n\n### Performance Data\n\n- **Maximum Power**: 710 hp @ 7,500 rpm\n- **Maximum Torque**: 568 lb-ft @ 5,500 rpm\n- **Redline**: 8,500 rpm\n\n## Transmission\n\n7-speed seamless shift dual-clutch transmission (SSG)\n\n### Gear Ratios\n\n```\n1st: 3.166\n2nd: 2.050\n3rd: 1.481\n4th: 1.166\n5th: 0.973\n6th: 0.816\n7th: 0.689\nReverse: 2.300\n```\n\n## Suspension\n\nAdaptive dampers with three driving modes:\n\n1. **Comfort**: Optimized for daily driving\n2. **Sport**: Enhanced handling characteristics\n3. **Track**: Maximum performance setup\n\n![Suspension Diagram](https://via.placeholder.com/600x400?text=Suspension+Components)\n*Figure 2: Suspension system overview*"
+  },
+  {
+    "id": "720s-diagnostics-codes",
+    "modelId": "720s",
+    "sectionId": "diagnostics",
+    "title": "Diagnostic Trouble Codes",
+    "slug": "trouble-codes",
+    "content": "# Diagnostic Trouble Codes\n\n## OBD-II Port Location\n\nThe OBD-II diagnostic port is located under the dashboard on the driver's side.\n\n## Common Codes\n\n### Engine Codes\n\n| Code | Description | Severity |\n|------|-------------|----------|\n| P0300 | Random cylinder misfire | High |\n| P0171 | System too lean (Bank 1) | Medium |\n| P0174 | System too lean (Bank 2) | Medium |\n| P0420 | Catalyst efficiency below threshold | Low |\n\n### Transmission Codes\n\n| Code | Description | Action Required |\n|------|-------------|----------------|\n| P0700 | Transmission control system | Scan TCM |\n| P0715 | Input/turbine speed sensor | Replace sensor |\n| P0720 | Output speed sensor | Check wiring |\n\n## Diagnostic Procedure\n\n### Step 1: Connect Scanner\n\n```bash\n# Scanner connection procedure\n1. Turn ignition to ON position (do not start)\n2. Connect OBD scanner to port\n3. Follow scanner prompts\n4. Record all active and pending codes\n```\n\n### Step 2: Code Analysis\n\n> **Important**: Always clear codes after repairs and test drive to confirm fix.\n\n1. Look up code definitions\n2. Check for multiple related codes\n3. Verify with known symptoms\n4. Consult wiring diagrams if needed\n\n![Diagnostic Port](https://via.placeholder.com/400x300?text=OBD+Port+Location)\n*Figure 3: OBD-II port location*"
+  },
+  {
+    "id": "720s-wiring-harness",
+    "modelId": "720s",
+    "sectionId": "wiring",
+    "title": "Main Wiring Harness",
+    "slug": "main-harness",
+    "content": "# Main Wiring Harness\n\n## Safety First\n\n> **Danger**: Always disconnect battery before working on electrical systems.\n\n### Required Tools\n\n- Digital multimeter\n- Wire strippers\n- Heat shrink tubing\n- Soldering iron\n- Electrical tape\n\n## Harness Layout\n\nThe main wiring harness runs from the front electrical center to the rear of the vehicle.\n\n### Primary Connections\n\n1. **Engine Bay Junction**\n   - ECU connections\n   - Sensor power distribution\n   - Ground points\n\n2. **Cabin Distribution**\n   - Dashboard electronics\n   - Interior lighting\n   - Climate control\n\n3. **Rear Section**\n   - Tail light assembly\n   - Fuel pump\n   - Rear sensors\n\n## Wire Color Codes\n\n| Color | Function |\n|-------|----------|\n| Red | 12V Power |\n| Black | Ground |\n| Blue | Signal |\n| Yellow | Switched Power |\n| Green | Data |\n| White | Lighting |\n\n## Testing Procedures\n\n### Continuity Test\n\n```bash\n# Multimeter continuity check\n1. Set meter to continuity mode (beep)\n2. Touch probes to wire ends\n3. Listen for beep (good connection)\n4. No beep = open circuit\n```\n\n### Voltage Test\n\n```bash\n# Voltage measurement\n1. Set meter to DC voltage\n2. Black probe to ground\n3. Red probe to wire\n4. Compare to specification\n```\n\n![Wiring Diagram](https://via.placeholder.com/800x600?text=Wiring+Harness+Diagram)\n*Figure 4: Main wiring harness routing*"
+  },
+  {
+    "id": "650s-general-overview",
+    "modelId": "650s",
+    "sectionId": "general",
+    "title": "Vehicle Overview",
+    "slug": "overview",
+    "content": "# McLaren 650S Overview\n\nThe McLaren 650S is a British sports car designed and manufactured by McLaren Automotive. It was announced in 2014 as a new model, but based on the existing MP4-12C.\n\n## Key Features\n\n- Carbon fiber monocoque chassis\n- Active aerodynamics\n- Adaptive suspension\n- Launch control system\n\n### Performance Highlights\n\n| Metric | Value |\n|--------|-------|\n| Power | 641 hp |\n| Torque | 500 lb-ft |\n| 0-62 mph | 3.0 seconds |\n| Top Speed | 207 mph |\n\n## Getting Started\n\nBefore performing any maintenance:\n\n1. Review safety procedures\n2. Gather required tools\n3. Ensure proper workspace\n4. Check service bulletins\n\n> **Note**: Always refer to the latest technical service bulletins for updates.\n\n![650S Profile](https://via.placeholder.com/600x300?text=McLaren+650S)\n*Figure 1: McLaren 650S side profile*"
+  }
+]

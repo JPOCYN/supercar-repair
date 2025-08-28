@@ -1,0 +1,26 @@
+[
+  {
+    "id": "mclaren",
+    "name": "McLaren",
+    "slug": "mclaren",
+    "enabled": true
+  },
+  {
+    "id": "ferrari",
+    "name": "Ferrari",
+    "slug": "ferrari",
+    "enabled": false
+  },
+  {
+    "id": "lamborghini",
+    "name": "Lamborghini",
+    "slug": "lamborghini",
+    "enabled": false
+  },
+  {
+    "id": "porsche",
+    "name": "Porsche",
+    "slug": "porsche",
+    "enabled": false
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "general",
+    "name": "General",
+    "slug": "general",
+    "order": 1
+  },
+  {
+    "id": "diagnostics",
+    "name": "Diagnostics",
+    "slug": "diagnostics",
+    "order": 2
+  },
+  {
+    "id": "wiring",
+    "name": "Wiring",
+    "slug": "wiring",
+    "order": 3
+  },
+  {
+    "id": "torque",
+    "name": "Torque",
+    "slug": "torque",
+    "order": 4
+  },
+  {
+    "id": "body-trim",
+    "name": "Body & Trim",
+    "slug": "body-trim",
+    "order": 5
+  },
+  {
+    "id": "maintenance",
+    "name": "Maintenance",
+    "slug": "maintenance",
+    "order": 6
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "mp4-12c",
+    "brandId": "mclaren",
+    "name": "MP4-12C",
+    "slug": "mp4-12c",
+    "image": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "625c",
+    "brandId": "mclaren",
+    "name": "625C",
+    "slug": "625c",
+    "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "650s",
+    "brandId": "mclaren",
+    "name": "650S",
+    "slug": "650s",
+    "image": "https://images.unsplash.com/photo-1563720223185-11003d516935?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "675lt",
+    "brandId": "mclaren",
+    "name": "675LT",
+    "slug": "675lt",
+    "image": "https://images.unsplash.com/photo-1544829099-b9a0c5303bea?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "540c",
+    "brandId": "mclaren",
+    "name": "540C",
+    "slug": "540c",
+    "image": "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "570s",
+    "brandId": "mclaren",
+    "name": "570S",
+    "slug": "570s",
+    "image": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "600lt",
+    "brandId": "mclaren",
+    "name": "600LT",
+    "slug": "600lt",
+    "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "720s",
+    "brandId": "mclaren",
+    "name": "720S",
+    "slug": "720s",
+    "image": "https://images.unsplash.com/photo-1563720223185-11003d516935?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "765lt",
+    "brandId": "mclaren",
+    "name": "765LT",
+    "slug": "765lt",
+    "image": "https://images.unsplash.com/photo-1544829099-b9a0c5303bea?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "gt",
+    "brandId": "mclaren",
+    "name": "GT",
+    "slug": "gt",
+    "image": "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "artura",
+    "brandId": "mclaren",
+    "name": "Artura",
+    "slug": "artura",
+    "image": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400&h=250&fit=crop"
+  }
+]

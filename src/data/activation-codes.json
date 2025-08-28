@@ -1,0 +1,68 @@
+[
+  {
+    "id": "1",
+    "code": "MCL-1DAY-ABC123",
+    "planType": "day",
+    "status": "unused"
+  },
+  {
+    "id": "2",
+    "code": "MCL-1DAY-DEF456",
+    "planType": "day",
+    "status": "redeemed",
+    "redeemedBy": "user1@example.com",
+    "redeemedAt": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": "3",
+    "code": "MCL-1WEEK-GHI789",
+    "planType": "week",
+    "status": "unused"
+  },
+  {
+    "id": "4",
+    "code": "MCL-1WEEK-JKL012",
+    "planType": "week",
+    "status": "expired"
+  },
+  {
+    "id": "5",
+    "code": "MCL-1MO-MNO345",
+    "planType": "month",
+    "status": "unused"
+  },
+  {
+    "id": "6",
+    "code": "MCL-1MO-PQR678",
+    "planType": "month",
+    "status": "redeemed",
+    "redeemedBy": "user2@example.com",
+    "redeemedAt": "2024-01-10T14:20:00Z"
+  },
+  {
+    "id": "7",
+    "code": "MCL-1YR-STU901",
+    "planType": "year",
+    "status": "unused"
+  },
+  {
+    "id": "8",
+    "code": "MCL-1YR-VWX234",
+    "planType": "year",
+    "status": "redeemed",
+    "redeemedBy": "admin@example.com",
+    "redeemedAt": "2024-01-01T09:00:00Z"
+  },
+  {
+    "id": "9",
+    "code": "MCL-1DAY-YZA567",
+    "planType": "day",
+    "status": "expired"
+  },
+  {
+    "id": "10",
+    "code": "MCL-1WEEK-BCD890",
+    "planType": "week",
+    "status": "unused"
+  }
+]

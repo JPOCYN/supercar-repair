@@ -1,0 +1,60 @@
+[
+  {
+    "id": "day",
+    "name": "Day Pass",
+    "duration": "24 Hours",
+    "price": "$9.99",
+    "features": [
+      "Access to all McLaren manuals",
+      "Downloadable sections",
+      "Search functionality",
+      "Mobile access"
+    ]
+  },
+  {
+    "id": "week",
+    "name": "Weekly Access",
+    "duration": "7 Days", 
+    "price": "$24.99",
+    "features": [
+      "Access to all McLaren manuals",
+      "Downloadable sections",
+      "Search functionality",
+      "Mobile access",
+      "Priority support"
+    ]
+  },
+  {
+    "id": "month",
+    "name": "Monthly Pro",
+    "duration": "30 Days",
+    "price": "$79.99",
+    "popular": true,
+    "features": [
+      "Access to all McLaren manuals",
+      "Downloadable sections", 
+      "Search functionality",
+      "Mobile access",
+      "Priority support",
+      "Exclusive content",
+      "Advanced diagnostics"
+    ]
+  },
+  {
+    "id": "year",
+    "name": "Annual Ultimate",
+    "duration": "365 Days",
+    "price": "$299.99",
+    "features": [
+      "Access to all McLaren manuals",
+      "Downloadable sections",
+      "Search functionality", 
+      "Mobile access",
+      "Priority support",
+      "Exclusive content",
+      "Advanced diagnostics",
+      "Early access to new content",
+      "Dedicated account manager"
+    ]
+  }
+]
