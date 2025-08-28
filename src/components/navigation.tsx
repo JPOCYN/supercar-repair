@@ -88,16 +88,17 @@ export function Navigation() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <Button
               variant="ghost"
               size="icon"
+              className="w-11 h-11 rounded-2xl hover:bg-emerald-500/10"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? (
-                <X className="h-6 w-6" />
+                <X className="h-6 w-6 text-emerald-400" />
               ) : (
-                <Menu className="h-6 w-6" />
+                <Menu className="h-6 w-6 text-emerald-400" />
               )}
             </Button>
           </div>
@@ -105,45 +106,46 @@ export function Navigation() {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="lg:hidden ultra-glass border-t border-emerald-500/10">
+            <div className="px-4 pt-4 pb-6 space-y-3">
               {session ? (
                 <>
                   <Link href="/browse" className="block">
-                    <Button variant="ghost" className="w-full justify-start">
+                    <Button variant="ghost" className="w-full justify-start text-base font-medium hover:bg-emerald-500/10 hover:text-emerald-400 py-3">
                       Browse
                     </Button>
                   </Link>
                   <Link href="/pricing" className="block">
-                    <Button variant="ghost" className="w-full justify-start">
+                    <Button variant="ghost" className="w-full justify-start text-base font-medium hover:bg-emerald-500/10 hover:text-emerald-400 py-3">
                       Pricing
                     </Button>
                   </Link>
                   <Link href="/account" className="block">
-                    <Button variant="ghost" className="w-full justify-start">
-                      <User className="h-4 w-4 mr-2" />
+                    <Button variant="ghost" className="w-full justify-start text-base font-medium hover:bg-emerald-500/10 hover:text-emerald-400 py-3">
+                      <User className="h-5 w-5 mr-3" />
                       Account
                     </Button>
                   </Link>
                   {session.user.role === "admin" && (
                     <Link href="/admin" className="block">
-                      <Button variant="ghost" className="w-full justify-start">
-                        <Settings className="h-4 w-4 mr-2" />
+                      <Button variant="ghost" className="w-full justify-start text-base font-medium hover:bg-emerald-500/10 hover:text-emerald-400 py-3">
+                        <Settings className="h-5 w-5 mr-3" />
                         Admin
                       </Button>
                     </Link>
                   )}
-                  <div className="px-3 py-2">
+                  <div className="px-3 py-4">
                     <PlanBadge 
                       planType={session.user.planType}
                       expiresAt={session.user.expiresAt}
                     />
                   </div>
-                  <div className="flex items-center justify-between px-3">
+                  <div className="flex items-center justify-between px-3 pt-2 border-t border-emerald-500/10">
                     <ThemeToggle />
                     <Button 
                       variant="ghost" 
                       size="sm"
+                      className="hover:bg-red-500/10 hover:text-red-400"
                       onClick={() => signOut()}
                     >
                       <LogOut className="h-4 w-4 mr-2" />
@@ -154,16 +156,16 @@ export function Navigation() {
               ) : (
                 <>
                   <Link href="/login" className="block">
-                    <Button variant="ghost" className="w-full justify-start">
-                      Login
+                    <Button variant="ghost" className="w-full justify-start text-base font-medium hover:bg-emerald-500/10 hover:text-emerald-400 py-3">
+                      Sign In
                     </Button>
                   </Link>
                   <Link href="/signup" className="block">
-                    <Button className="w-full">
-                      Sign Up
+                    <Button className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold py-3 rounded-2xl">
+                      Get Started
                     </Button>
                   </Link>
-                  <div className="px-3 py-2">
+                  <div className="px-3 py-4 border-t border-emerald-500/10">
                     <ThemeToggle />
                   </div>
                 </>
