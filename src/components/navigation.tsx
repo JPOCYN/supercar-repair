@@ -13,29 +13,31 @@ export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <nav className="bg-background border-b border-border">
+    <nav className="glass-card fixed top-0 left-0 right-0 z-50 border-b border-primary/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-20">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <Car className="h-8 w-8 text-primary" />
-              <span className="font-bold text-xl">Supercar Repair</span>
+            <Link href="/" className="flex items-center space-x-3 group">
+              <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-primary to-purple-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Car className="h-6 w-6 text-white" />
+              </div>
+              <span className="font-bold text-xl gradient-text">Supercar Repair</span>
             </Link>
           </div>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-6">
             {session ? (
               <>
                 <Link href="/browse">
-                  <Button variant="ghost">Browse</Button>
+                  <Button variant="ghost" className="hover:bg-primary/10 hover:text-primary">Browse</Button>
                 </Link>
                 <Link href="/pricing">
-                  <Button variant="ghost">Pricing</Button>
+                  <Button variant="ghost" className="hover:bg-primary/10 hover:text-primary">Pricing</Button>
                 </Link>
                 {session.user.role === "admin" && (
                   <Link href="/admin">
-                    <Button variant="ghost">Admin</Button>
+                    <Button variant="ghost" className="hover:bg-primary/10 hover:text-primary">Admin</Button>
                   </Link>
                 )}
                 <PlanBadge 
@@ -44,7 +46,7 @@ export function Navigation() {
                 />
                 <div className="flex items-center space-x-2">
                   <Link href="/account">
-                    <Button variant="ghost" size="icon">
+                    <Button variant="ghost" size="icon" className="hover:bg-primary/10 hover:text-primary">
                       <User className="h-4 w-4" />
                     </Button>
                   </Link>
@@ -52,6 +54,7 @@ export function Navigation() {
                   <Button 
                     variant="ghost" 
                     size="icon"
+                    className="hover:bg-destructive/10 hover:text-destructive"
                     onClick={() => signOut()}
                   >
                     <LogOut className="h-4 w-4" />
@@ -61,10 +64,10 @@ export function Navigation() {
             ) : (
               <>
                 <Link href="/login">
-                  <Button variant="ghost">Login</Button>
+                  <Button variant="ghost" className="hover:bg-primary/10 hover:text-primary">Login</Button>
                 </Link>
                 <Link href="/signup">
-                  <Button>Sign Up</Button>
+                  <Button className="bg-primary hover:bg-primary/90 glow-effect">Sign Up</Button>
                 </Link>
                 <ThemeToggle />
               </>
