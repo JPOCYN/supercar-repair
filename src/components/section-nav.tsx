@@ -25,7 +25,7 @@ export function SectionNav({
   currentPage 
 }: SectionNavProps) {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(
-    new Set([currentSection])
+    new Set(currentSection ? [currentSection] : [])
   )
   const [isMobileOpen, setIsMobileOpen] = useState(false)
 

@@ -2,7 +2,7 @@
 
 import { useSession } from "next-auth/react"
 import { useRouter } from "next/navigation"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { ModelSwitcher } from "@/components/model-switcher"
@@ -21,13 +21,17 @@ import manualPagesData from "@/data/manual-pages.json"
 import { Model, Section, ManualPage } from "@/types"
 
 interface ManualPageProps {
-  params: {
+  params: Promise<{
     brand: string
     model: string
-  }
+  }>
 }
 
 export default function ManualOverviewPage({ params }: ManualPageProps) {
+  const [resolvedParams, setResolvedParams] = useState<{
+    brand: string
+    model: string
+  } | null>(null)
   const { data: session } = useSession()
   const router = useRouter()
   
@@ -35,8 +39,29 @@ export default function ManualOverviewPage({ params }: ManualPageProps) {
   const sections = sectionsData as Section[]
   const pages = manualPagesData as ManualPage[]
 
-  const currentModel = models.find(m => m.slug === params.model && m.brandId === params.brand)
-  const brandModels = models.filter(m => m.brandId === params.brand)
+  useEffect(() => {
+    params.then(setResolvedParams)
+  }, [params])
+
+  // Show loading state while params are being resolved
+  if (!resolvedParams) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Navigation />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex items-center justify-center">
+            <div className="text-center">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
+              <p className="text-muted-foreground">Loading manual...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  const currentModel = models.find(m => m.slug === resolvedParams.model && m.brandId === resolvedParams.brand)
+  const brandModels = models.filter(m => m.brandId === resolvedParams.brand)
   
   const hasAccess = session?.user?.planType && session?.user?.expiresAt && 
                    new Date(session.user.expiresAt) > new Date()
@@ -94,7 +119,7 @@ export default function ManualOverviewPage({ params }: ManualPageProps) {
           <Breadcrumbs 
             items={[
               { label: "Manuals" },
-              { label: params.brand.toUpperCase() },
+              { label: resolvedParams.brand.toUpperCase() },
               { label: currentModel.name }
             ]}
           />
@@ -110,8 +135,8 @@ export default function ManualOverviewPage({ params }: ManualPageProps) {
             <div className="flex items-center space-x-4 mt-4 lg:mt-0">
               <ModelSwitcher 
                 models={brandModels}
-                currentModel={params.model}
-                currentBrand={params.brand}
+                currentModel={resolvedParams.model}
+                currentBrand={resolvedParams.brand}
               />
               <div className="w-64">
                 <SearchInput 
@@ -128,8 +153,8 @@ export default function ManualOverviewPage({ params }: ManualPageProps) {
           <SectionNav
             sections={sections}
             pages={modelPages}
-            currentBrand={params.brand}
-            currentModel={params.model}
+            currentBrand={resolvedParams.brand}
+            currentModel={resolvedParams.model}
           />
           
           <div className="flex-1">
@@ -158,7 +183,7 @@ export default function ManualOverviewPage({ params }: ManualPageProps) {
                           <Button
                             variant="outline"
                             size="sm"
-                            onClick={() => router.push(`/manual/${params.brand}/${params.model}/${section.slug}`)}
+                            onClick={() => router.push(`/manual/${resolvedParams.brand}/${resolvedParams.model}/${section.slug}`)}
                             disabled={section.pageCount === 0}
                           >
                             <ArrowRight className="h-4 w-4" />
