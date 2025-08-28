@@ -13,17 +13,17 @@ export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <nav className="ultra-glass fixed top-0 left-0 right-0 z-50 border-b border-emerald-500/10">
-      <div className="max-w-8xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between h-24">
+    <nav className="premium-glass fixed top-0 left-0 right-0 z-50 border-b border-violet-500/10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="flex justify-between h-20">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-4 group">
-              <div className="w-12 h-12 rounded-3xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center group-hover:scale-110 transition-all duration-300 ultra-glow">
-                <Car className="h-7 w-7 text-white" />
+            <Link href="/" className="flex items-center space-x-3 group">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-all duration-300 premium-glow">
+                <Car className="h-5 w-5 text-white" />
               </div>
               <div className="hidden sm:block">
-                <div className="text-2xl font-black gradient-text">SUPERCAR</div>
-                <div className="text-xs text-muted-foreground font-medium -mt-1">Documentation Platform</div>
+                <div className="text-xl font-bold gradient-text">Supercar</div>
+                <div className="text-xs text-muted-foreground/70 font-medium -mt-1">Documentation Platform</div>
               </div>
             </Link>
           </div>
@@ -92,13 +92,13 @@ export function Navigation() {
             <Button
               variant="ghost"
               size="icon"
-              className="w-11 h-11 rounded-2xl hover:bg-emerald-500/10"
+              className="w-10 h-10 rounded-lg hover:bg-violet-500/10"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? (
-                <X className="h-6 w-6 text-emerald-400" />
+                <X className="h-5 w-5 text-violet-400" />
               ) : (
-                <Menu className="h-6 w-6 text-emerald-400" />
+                <Menu className="h-5 w-5 text-violet-400" />
               )}
             </Button>
           </div>
@@ -106,30 +106,30 @@ export function Navigation() {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden ultra-glass border-t border-emerald-500/10">
-            <div className="px-4 pt-4 pb-6 space-y-3">
+          <div className="lg:hidden premium-glass border-t border-violet-500/10">
+            <div className="px-4 pt-4 pb-6 space-y-2">
               {session ? (
                 <>
                   <Link href="/browse" className="block">
-                    <Button variant="ghost" className="w-full justify-start text-base font-medium hover:bg-emerald-500/10 hover:text-emerald-400 py-3">
+                    <Button variant="ghost" className="w-full justify-start font-medium hover:bg-violet-500/10 hover:text-violet-400 py-3 rounded-lg">
                       Browse
                     </Button>
                   </Link>
                   <Link href="/pricing" className="block">
-                    <Button variant="ghost" className="w-full justify-start text-base font-medium hover:bg-emerald-500/10 hover:text-emerald-400 py-3">
+                    <Button variant="ghost" className="w-full justify-start font-medium hover:bg-violet-500/10 hover:text-violet-400 py-3 rounded-lg">
                       Pricing
                     </Button>
                   </Link>
                   <Link href="/account" className="block">
-                    <Button variant="ghost" className="w-full justify-start text-base font-medium hover:bg-emerald-500/10 hover:text-emerald-400 py-3">
-                      <User className="h-5 w-5 mr-3" />
+                    <Button variant="ghost" className="w-full justify-start font-medium hover:bg-violet-500/10 hover:text-violet-400 py-3 rounded-lg">
+                      <User className="h-4 w-4 mr-3" />
                       Account
                     </Button>
                   </Link>
                   {session.user.role === "admin" && (
                     <Link href="/admin" className="block">
-                      <Button variant="ghost" className="w-full justify-start text-base font-medium hover:bg-emerald-500/10 hover:text-emerald-400 py-3">
-                        <Settings className="h-5 w-5 mr-3" />
+                      <Button variant="ghost" className="w-full justify-start font-medium hover:bg-violet-500/10 hover:text-violet-400 py-3 rounded-lg">
+                        <Settings className="h-4 w-4 mr-3" />
                         Admin
                       </Button>
                     </Link>
@@ -140,12 +140,12 @@ export function Navigation() {
                       expiresAt={session.user.expiresAt}
                     />
                   </div>
-                  <div className="flex items-center justify-between px-3 pt-2 border-t border-emerald-500/10">
+                  <div className="flex items-center justify-between px-3 pt-2 border-t border-violet-500/10">
                     <ThemeToggle />
                     <Button 
                       variant="ghost" 
                       size="sm"
-                      className="hover:bg-red-500/10 hover:text-red-400"
+                      className="hover:bg-red-500/10 hover:text-red-400 rounded-lg"
                       onClick={() => signOut()}
                     >
                       <LogOut className="h-4 w-4 mr-2" />
@@ -156,16 +156,16 @@ export function Navigation() {
               ) : (
                 <>
                   <Link href="/login" className="block">
-                    <Button variant="ghost" className="w-full justify-start text-base font-medium hover:bg-emerald-500/10 hover:text-emerald-400 py-3">
+                    <Button variant="ghost" className="w-full justify-start font-medium hover:bg-violet-500/10 hover:text-violet-400 py-3 rounded-lg">
                       Sign In
                     </Button>
                   </Link>
                   <Link href="/signup" className="block">
-                    <Button className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold py-3 rounded-2xl">
+                    <Button className="premium-button w-full py-3 rounded-lg font-medium">
                       Get Started
                     </Button>
                   </Link>
-                  <div className="px-3 py-4 border-t border-emerald-500/10">
+                  <div className="px-3 py-4 border-t border-violet-500/10">
                     <ThemeToggle />
                   </div>
                 </>
